@@ -19,8 +19,10 @@ jobs:
       - name: Set up C++ environment
         run: sudo apt-get update && sudo apt-get install -y build-essential
 
-      - name: Build and run C++ files
+      - name: Build C++ files
         run: |
+          ls -R  # Check the folder structure
           cd graph
+          ls     # Check if files are listed here
           g++ -o buildgraph buildgraph.cpp
           ./buildgraph
